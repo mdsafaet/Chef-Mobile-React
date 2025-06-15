@@ -4,6 +4,7 @@ import { GiKitchenKnives } from "react-icons/gi";
 import { AiFillHome } from "react-icons/ai";
 import { BsListCheck } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
+import { Link } from 'react-router';
 
 export const Footer = () => {
   return (
@@ -22,10 +23,10 @@ export const Footer = () => {
         </button>
 
         {/* Center Icon: Home */}
-        <button className="col-span-4 py-1 text-orange-500 mb-2">
+        <Link to={'/'} className="col-span-4 py-1 text-orange-500 mb-2">
           <AiFillHome className="mx-auto text-2xl" />
           <p className="text-xs">Home</p>
-        </button>
+        </Link>
 
         {/* Icon 4: Order */}
         <button className="col-span-2 py-1 text-gray-400 hover:text-black">
