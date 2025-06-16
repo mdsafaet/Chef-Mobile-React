@@ -22,14 +22,14 @@ export const Sections = () => {
       {/* Add Section Modal */}
       <dialog id="add_modal" className="modal">
         <div className="modal-box">
-          <h2 className="text-lg font-semibold">Create New Section</h2>
-          <input type="text" placeholder="Enter Section Name" className="input input-bordered w-full my-2 text-sm" />
-          <select className="select select-bordered w-full text-sm">
+          <h2 className="text-lg font-semibold mb-2">Create New Section</h2>
+          <input type="text" placeholder="Enter Section Name" className="w-full px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500 mb-4  shadow-gray-400" />
+          <select className="select select-bordered w-full px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500  shadow-gray-400">
             <option>Select a Main Chef for Section [optional]</option>
             <option value="chef_1">Chef John</option>
             <option value="chef_2">Chef Marie</option>
           </select>
-          <button className="btn w-full mt-4 bg-orange-500 text-white">Save Section</button>
+          <button className="btn block mx-auto w-1/2 mt-4 bg-orange-500 text-white shadow-2xl shadow-orange-700">Save Section</button>
           <div className="modal-action">
             <form method="dialog">
               <button className="btn">Close</button>
@@ -46,7 +46,7 @@ export const Sections = () => {
         <Link to="/prep-list" className="bg-orange-500 hover:bg-orange-600 text-white px-2 py-2 rounded-md text-sm">Prep-list</Link>
         </div>
 
-        <div className="overflow-x-auto w-full mt-2">
+        <div className="overflow-x-auto w-full mt-2 inset-shadow-sm shadow-xl/30">
           <div className="flex space-x-2 p-2 min-w-[1000px]">
             {['Pan', 'Lader', 'Bar', 'Bar', 'Pan', 'Lader', 'Lader', 'Lader', 'Lader', 'Lader'].map((item, idx) => (
               <div key={idx} className="w-18 h-9 bg-orange-500 rounded-md flex items-center justify-center text-white">
@@ -67,16 +67,16 @@ export const Sections = () => {
         <dialog id="edit_modal" className="modal">
           <div className="modal-box">
             <h2 className="text-lg font-semibold">Edit Pan</h2>
-            <input type="text" defaultValue="Pan" className="input input-bordered w-full my-2 text-sm" />
-            <select className="select select-bordered w-full text-sm">
+            <input type="text" defaultValue="Pan" className="input input-bordered w-full my-2 text-sm px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500  shadow-gray-400" />
+            <select className="select select-bordered w-full text-sm  px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500 mt-4  shadow-gray-400 z-50">
               <option>Select a Main Chef for Section [optional]</option>
               <option selected value="alexa">Alexa Huson</option>
               <option value="john">John Doe</option>
               <option value="jane">Safaet</option>
             </select>
             <div className="flex justify-start gap-3 pt-4">
-              <button className="btn bg-orange-500 text-white">Update</button>
-              <button className="btn bg-red-500 text-white">Delete</button>
+              <button className="btn bg-green-500 text-white shadow-2xl shadow-green-700">Update</button>
+              <button className="btn bg-red-500 text-white shadow-2xl shadow-red-900">Delete</button>
             </div>
             <div className="modal-action">
               <form method="dialog">

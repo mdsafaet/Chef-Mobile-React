@@ -2,14 +2,14 @@ import React from 'react'
 import { Footer } from '../common/Footer'
 import { Nav } from '../common/Nav'
 import { AiOutlineClose, AiOutlineInfoCircle } from 'react-icons/ai'
-import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
+import { BiChevronDown, BiChevronUp, BiInfoCircle } from 'react-icons/bi'
 import { Link } from 'react-router'
 
 export const PantryList = () => {
   return (
     <div>
       <Nav />
-      <h1 className="text-3xl font-bold text-center my-5 text-amber-500">Pantry List</h1>
+ 
        <div className="pb-24 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mt-4 flex flex-wrap justify-between gap-2 items-center">
         <button className="bg-orange-500 text-white px-2 py-2 rounded-md text-sm">Action</button>
@@ -68,7 +68,7 @@ export const PantryList = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between px-4 py-3 gap-3">
-          <div className="flex items-center border border-orange-500 rounded-md overflow-hidden bg-gray-50 w-full sm:w-1/3 md:w-1/4">
+          <div className="flex items-center border border-orange-500 rounded-md overflow-hidden bg-gray-50 w-full sm:w-1/3 md:w-1/4 inset-shadow-sm shadow-xl/30">
             <input
               type="text"
               placeholder="Search Item"
@@ -82,21 +82,21 @@ export const PantryList = () => {
             </div>
           </div>
 
-          <div className="text-center font-semibold text-lg flex-grow">
+          <div className="text-center font-semibold text-lg flex-grow ">
             Pan Pantry List
           </div>
 
-          <button className="border border-orange-500 text-orange-500 font-medium px-4 py-2 rounded-md hover:bg-orange-50 w-full sm:w-auto">
+          <button className="border border-orange-500 text-orange-500 font-medium px-4 py-2 rounded-md hover:bg-orange-50 w-full sm:w-auto inset-shadow-sm shadow-xl/30">
             Clear List
           </button>
         </div>
 
-        <div className="mx-auto mt-10 px-4 sm:px-6 lg:px-8  shadow-xl shadow-gray-400">
-          <div className="flex items-center justify-between bg-white p-4 rounded-lg shadow-lg border border-gray-200">
+        <div className ="mx-auto mt-10 px- sm:px-6 lg:px-8  ">
+          <div className="flex items-center justify-between bg-white p-4 rounded-lg inset-shadow-sm shadow-xl/30 border border-white " >
             <img
               src="https://res.cloudinary.com/dnawewlz7/image/upload/v1/Restaurant%20Tech%20Files/ordersplus/uqxjazvsq0rgwrwnsvd3"
               alt="Beef"
-              className="w-16 h-16 rounded-md object-cover"
+              className="w-16 h-16 rounded-md object-cove border border-amber-50 shadow-lg shadow-gray-400 "
             />
 
             <div className="flex-1 px-3">
@@ -122,6 +122,10 @@ export const PantryList = () => {
             </div>
           </div>
         </div>
+
+
+
+      
  <dialog id="productModal" className="modal">
         <div className="modal-box w-[400px] p-6 relative">
           <button
@@ -137,7 +141,7 @@ export const PantryList = () => {
             <img
               src="https://res.cloudinary.com/dnawewlz7/image/upload/v1/Restaurant%20Tech%20Files/ordersplus/uqxjazvsq0rgwrwnsvd3"
               alt="Product"
-              className="w-40 h-24 object-cover rounded border"
+              className="w-40 h-24 object-cover rounded border border-amber-50 shadow-lg shadow-gray-400"
             />
             <div className="text-sm space-y-1">
               <p className="font-semibold text-gray-900">ABC Meat & Poultry</p>
@@ -159,7 +163,7 @@ export const PantryList = () => {
               />
               <div className="absolute right-0 top-0 flex flex-col h-full justify-between py-1 pr-1">
                 <button className="text-gray-500 hover:text-gray-700">
-                  <BiChevronUp size={16} />
+                  <BiInfoCircle  size={16} />
                 </button>
                 <button className="text-gray-500 hover:text-gray-700">
                   <BiChevronDown size={16} />
@@ -178,8 +182,8 @@ export const PantryList = () => {
           </div>
 
             <div className="flex justify-center gap-3 pt-4 items-center">
-            <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm">Save Notes</button>
-            <button className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded text-sm">Add to Order</button>
+            <button className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded text-sm shadow-2xl shadow-green-700">Save Notes</button>
+            <button className="bg-orange-500 hover:bg-orange-700 text-white px-4 py-2 rounded text-sm shadow-2xl shadow-orange-700">Add to Order</button>
           </div>
         </div>
       </dialog>
