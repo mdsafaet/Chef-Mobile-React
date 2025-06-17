@@ -15,40 +15,15 @@ export const PantryList = () => {
         <button className="bg-orange-500 text-white px-2 py-2 rounded-md text-sm">Action</button>
         <p className="font-bold text-sm sm:text-base">My Kitchen</p>
 
-        <button
-          className="bg-orange-500 text-white px-2 py-2 rounded-md text-sm"
-          onClick={() => document.getElementById('editModal').showModal()}
+        <Link to="/add-to-pantry" className="bg-orange-500 text-white px-2 py-2 rounded-md text-sm"
+         
+         
         >
           Edit Pantry
-        </button>
+        </Link>
       </div>
 
-      {/* Edit Pantry Modal */}
-      <dialog id="editModal" className="modal">
-        <div className="modal-box">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">Create New Section</h2>
-          <input
-            type="text"
-            placeholder="Enter Section Name"
-            className="w-full border border-gray-300 rounded-md px-4 py-2 mb-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
-          />
-          <select
-            className="mb-2 w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
-          >
-            <option value="">Select a Main Chef for Section [optional]</option>
-            <option value="chef_1">Chef John</option>
-            <option value="chef_2">Chef Marie</option>
-          </select>
-          <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 rounded-md transition duration-200 text-sm">
-            Save Section
-          </button>
-          <div className="modal-action">
-            <form method="dialog">
-              <button className="btn">Close</button>
-            </form>
-          </div>
-        </div>
-      </dialog>
+     
 
       <div className="p-4 sm:p-6 rounded-md space-y-4 mt-4">
         <div className="flex flex-wrap justify-between gap-2">
@@ -163,7 +138,7 @@ export const PantryList = () => {
               />
               <div className="absolute right-0 top-0 flex flex-col h-full justify-between py-1 pr-1">
                 <button className="text-gray-500 hover:text-gray-700">
-                  <BiInfoCircle  size={16} />
+                  <BiChevronUp  size={16} />
                 </button>
                 <button className="text-gray-500 hover:text-gray-700">
                   <BiChevronDown size={16} />

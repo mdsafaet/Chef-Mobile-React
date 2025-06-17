@@ -3,6 +3,8 @@ import { MainLayout } from "../layouts/MainLayout";
 import { Sections } from "../MyKitchen/Sections";
 import { PantryList } from "../MyKitchen/PantryList";
 import { Dashboard } from "../pages/Dashboard";
+import AddToPantry from "../MyKitchen/AddToPantry";
+import AbcFood from "../MyKitchen/AbcFood";
 
 
 
@@ -24,6 +26,16 @@ const routes =createBrowserRouter([
          {
       path: "/dashboard",
       element: <Dashboard />,
+    },
+
+             {
+      path: "/add-to-pantry",
+      element: <AddToPantry />,
+    },
+
+                 {
+      path: "/abc-food",
+      element: <AbcFood />,
     },
 
 
