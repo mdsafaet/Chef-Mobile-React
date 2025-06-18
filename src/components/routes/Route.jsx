@@ -3,6 +3,10 @@ import { MainLayout } from "../layouts/MainLayout";
 import { Sections } from "../MyKitchen/Sections";
 import { PantryList } from "../MyKitchen/PantryList";
 import { Dashboard } from "../pages/Dashboard";
+import { ManageTeam } from "../Admin/ManageTeam";
+import { AddStaff } from "../Admin/AddStaff";
+import { RosterManagement } from "../Admin/RosterManagement";
+import { EditStaff } from "../Admin/EditStaff"
 import AddToPantry from "../MyKitchen/AddToPantry";
 import AbcFood from "../MyKitchen/AbcFood";
 import Preplist from "../MyKitchen/Preplist";
@@ -29,6 +33,25 @@ const routes =createBrowserRouter([
       element: <Dashboard />,
     },
 
+     {
+      path: "/manage-team",
+      element: <ManageTeam />,
+    },
+    {
+      path: "/add-staff",
+      element: <AddStaff />,
+    },
+    {
+      path: "/edit-staff",
+      element: <EditStaff />
+    },
+    {
+      path: "/roster",
+      element: <RosterManagement/>,
+    },
+    
+   
+
              {
       path: "/add-to-pantry",
       element: <AddToPantry />,
@@ -42,6 +65,7 @@ const routes =createBrowserRouter([
       path: "/prep-list",
       element: <Preplist/>,
     },
+
 
 
 
