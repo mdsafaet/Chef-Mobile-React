@@ -65,6 +65,14 @@ const routes =createBrowserRouter([
       path: "/prep-list",
       element: <Preplist/>,
     },
+   
+    
+
+        {
+    path: "*",
+    element: <Navigate to="/"  />,
+  },
+
 
 
 
