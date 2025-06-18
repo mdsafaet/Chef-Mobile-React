@@ -6,22 +6,23 @@ import { MdOutlineShoppingBag } from 'react-icons/md';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 import { Link } from 'react-router';
+import NavButton from './NavButton';
+import SearchPagination from '../common/SearchPagination';
 
 const AddToPantry = () => {
   return (
     <div>
         <Nav />
         <h1 className="text-xl font-bold text-center mb-2">Add to Pantry</h1>
-             
-              <div className=" p-4 mt-4  ">
-                      <div className="flex flex-wrap justify-between gap-2 ">
-                        <Link to="/section" className="bg-orange-500 text-white px-2 py-2 rounded-md text-sm tab-active inset-shadow-sm shadow-xl/30">Section</Link>
-                        <Link to="/pantry-list" className="bg-orange-600 hover:bg-orange-600 text-white px-2 py-2 rounded-md text-sm inset-shadow-sm shadow-xl/30">Pantry-list</Link>
-                        <Link to="/prep-list" className="bg-orange-500 hover:bg-orange-600 text-white px-2 py-2 rounded-md text-sm inset-shadow-sm shadow-xl/30">Prep-list</Link>
-                      </div>
-                    </div>        
 
-        <div className="bg-gray-300 p-4">
+        <div className='p-4'>
+<NavButton  />
+</div>
+        
+             
+          
+
+        <div className="bg-gray-300 p-4 overflow-x-auto w-full ">
       <div className="flex gap-2">
         {/* Active Tab */}
         <button className="px-4 py-2 text-sm font-semibold rounded border border-orange-500 bg-orange-500 text-white">
@@ -45,7 +46,7 @@ const AddToPantry = () => {
           </div>
         </div>
 
-         <section className=" w-1/2 mt-4 mx-auto">
+         {/* <section className=" w-1/2 mt-4 mx-auto">
       <div className="flex items-center border border-orange-500 rounded-md overflow-hidden bg-gray-50 inset-shadow-sm shadow-xl/30">
         <input
           type="text"
@@ -63,7 +64,8 @@ const AddToPantry = () => {
           </svg>
         </div>
       </div>
-    </section>
+    </section> */}
+    <SearchPagination />
 
     <div className="container mx-auto mt-4">
       <div className="overflow-x-auto shadow-lg rounded-lg bg-white">

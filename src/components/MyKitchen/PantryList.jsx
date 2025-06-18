@@ -4,6 +4,7 @@ import { Nav } from '../common/Nav'
 import { AiOutlineClose, AiOutlineInfoCircle } from 'react-icons/ai'
 import { BiChevronDown, BiChevronUp, BiInfoCircle } from 'react-icons/bi'
 import { Link } from 'react-router'
+import NavButton from './NavButton'
 
 export const PantryList = () => {
   return (
@@ -26,11 +27,8 @@ export const PantryList = () => {
      
 
       <div className="p-4 sm:p-6 rounded-md space-y-4 mt-4">
-        <div className="flex flex-wrap justify-between gap-2">
-        <Link to="/section" className="bg-orange-500 text-white px-2 py-2 rounded-md text-sm tab-active">Section</Link>
-        <Link to="/pantry-list" className="bg-orange-600 hover:bg-orange-600 text-white px-2 py-2 rounded-md text-sm">Pantry-list</Link>
-        <Link to="/prep-list" className="bg-orange-500 hover:bg-orange-600 text-white px-2 py-2 rounded-md text-sm">Prep-list</Link>
-        </div>
+
+<NavButton />
 
         <div className="overflow-x-auto w-full mt-2">
           <div className="flex space-x-4 p-4 min-w-[1000px]">

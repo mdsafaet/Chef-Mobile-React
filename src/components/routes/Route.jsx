@@ -5,6 +5,7 @@ import { PantryList } from "../MyKitchen/PantryList";
 import { Dashboard } from "../pages/Dashboard";
 import AddToPantry from "../MyKitchen/AddToPantry";
 import AbcFood from "../MyKitchen/AbcFood";
+import Preplist from "../MyKitchen/Preplist";
 
 
 
@@ -36,6 +37,10 @@ const routes =createBrowserRouter([
                  {
       path: "/abc-food",
       element: <AbcFood />,
+    },
+                    {
+      path: "/prep-list",
+      element: <Preplist/>,
     },
 
 

@@ -4,6 +4,7 @@ import { Footer } from '../common/Footer'
 import { BiTransfer } from 'react-icons/bi'
 import { FiTrash2 } from 'react-icons/fi'
 import { Link } from 'react-router'
+import NavButton from './NavButton'
 
 export const Sections = () => {
   return (
@@ -11,13 +12,23 @@ export const Sections = () => {
 <div>
     <Nav /> 
      <div className="pb-24 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="mt-4 flex flex-wrap justify-between gap-2 items-center">
-        <button className="bg-orange-500 text-white px-2 py-2 rounded-md text-sm">Action</button>
+      {/* <div className="mt-4 flex flex-wrap justify-between gap-2 items-center">
+        <button className="py-3 text-center bg-orange-500 font-semibol text-white  border-b-2 border-orange-500 rounded-lg text-sm">Action</button>
         <p className="font-bold text-sm sm:text-base">My Kitchen</p>
-        <button className="bg-orange-500 text-white px-2 py-2 rounded-md text-sm" onClick={() => document.getElementById('add_modal').showModal()}>
+        <button className="py-3 text-center bg-orange-500 font-semibol text-white  border-b-2 border-orange-500 rounded-lg text-sm" onClick={() => document.getElementById('add_modal').showModal()}>
           Add Section
         </button>
-      </div>
+      </div> */}
+
+            <div className="mt-4 flex flex-wrap justify-between gap-2 items-center">
+              <button className="bg-orange-500 text-white px-2 py-2 rounded-md text-sm">Action</button>
+              <p className="font-bold text-sm sm:text-base">My Kitchen</p>
+      
+              <button className="bg-orange-500 text-white px-2 py-2 rounded-md text-sm" onClick={() => document.getElementById('add_modal').showModal()} 
+              >
+              Add Section
+              </button>
+            </div>
 
       {/* Add Section Modal */}
       <dialog id="add_modal" className="modal">
@@ -40,11 +51,9 @@ export const Sections = () => {
 
         {/* Section Overview */}
       <div className="p-4 sm:p-6 rounded-md space-y-4 mt-4 overflow-x-auto ">
-        <div className="flex flex-wrap justify-between gap-2">
-        <Link to="/section" className="bg-orange-500 text-white px-2 py-2 rounded-md text-sm tab-active">Section</Link>
-        <Link to="/pantry-list" className="bg-orange-600 hover:bg-orange-600 text-white px-2 py-2 rounded-md text-sm">Pantry-list</Link>
-        <Link to="/prep-list" className="bg-orange-500 hover:bg-orange-600 text-white px-2 py-2 rounded-md text-sm">Prep-list</Link>
-        </div>
+
+      <NavButton />
+       
 
         <div className="overflow-x-auto w-full mt-2">
           <div className="flex space-x-4 p-4 min-w-[1000px]">
@@ -58,16 +67,16 @@ export const Sections = () => {
 
 
         {/* Ladder Info + Edit Modal */}
-        <div className="flex flex-wrap justify-between items-center mt-4 gap-2">
+        <div className="flex flex-wrap justify-between items-center mt-2 mb-6 gap-2">
           <h2 className="text-sm font-semibold text-gray-700">Ladder Detail Info :</h2>
-          <button className="bg-orange-500 text-orange px-3 py-1 rounded-md text-sm font-semibold" onClick={() => document.getElementById('edit_modal').showModal()}>
+          <button className="bg-orange-500 text-white px-2 py-2 rounded-md text-sm" onClick={() => document.getElementById('edit_modal').showModal()}>
             Edit Section
           </button>
         </div>
 
         <dialog id="edit_modal" className="modal">
           <div className="modal-box">
-            <h2 className="text-lg font-semibold">Edit Pan</h2>
+            <h2 className="text-sm text-white ">Edit Pan</h2>
             <input type="text" defaultValue="Pan" className="input input-bordered w-full my-2 text-sm px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500  shadow-gray-400" />
             <select className="select select-bordered w-full text-sm  px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500 mt-4  shadow-gray-400 z-50">
               <option>Select a Main Chef for Section [optional]</option>
