@@ -95,6 +95,8 @@ const Preplist = () => {
 
       <SearchPagination />
 
+    <h1 className='text-xl font-semibold text-center'>Ladder Prep List</h1>
+
     <div className="container mx-auto mt-4">
       <div className="overflow-x-auto shadow-lg rounded-lg bg-white">
         <table className="min-w-full table-auto text-gray-700">
