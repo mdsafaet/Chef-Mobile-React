@@ -1,0 +1,98 @@
+import React from 'react';
+import { Nav } from '../common/Nav';
+import { Footer } from '../common/Footer';
+
+export const EditStaff = () => {
+  return (
+    <div> 
+      <Nav />
+      <div className="flex bg-gray-200 rounded-lg overflow-hidden shadow-sm mb-6">
+        <button className="flex-1 py-3 text-center text-gray-800 font-semibold bg-white border-b-2 border-orange-500 rounded-lg text-sm">Roster Settings</button>
+        <button className="flex-1 py-3 text-center text-gray-600 text-sm">View Roster</button>
+        <button className="flex-1 py-3 text-center text-gray-600 text-sm">Staff Attendance</button>
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 mb-6 shadow-gray-300 shadow-xl">
+        <div className="bg-gray-50 p-4 rounded-lg shadow-gray-300 shadow-xl flex items-center justify-between">
+          <div>
+            <h3 className="text-lg font-semibold text-orange-700">Dinner</h3>
+            <p className="text-sm text-gray-600">16:30 - 22:00</p>
+          </div>
+          <a href="#" className="text-orange-500 hover:text-orange-700">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+          </a>
+        </div>
+        <div className="bg-gray-50 p-4 rounded-lg shadow-gray-300 shadow-xl flex items-center justify-between">
+          <div>
+            <h3 className="text-lg font-semibold text-orange-700">Brunch</h3>
+            <p className="text-sm text-gray-600">06:00 - 12:00</p>
+          </div>
+          <a href="#" className="text-orange-500 hover:text-orange-700">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+          </a>
+        </div>
+        <div className="bg-gray-50 p-4 rounded-lg shadow-gray-300 shadow-xl flex items-center justify-between">
+          <div>
+            <h3 className="text-lg font-semibold text-orange-700">Chills</h3>
+            <p className="text-sm text-gray-600">14:54 - 18:30</p>
+          </div>
+          <a href="#" className="text-orange-500 hover:text-orange-700">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+          </a>
+        </div>
+
+        <div className="bg-gray-50 p-4 rounded-lg shadow-gray-300 shadow-xl flex items-center justify-between">
+          <div>
+            <h3 className="text-lg font-semibold text-orange-700">Snacks</h3>
+            <p className="text-sm text-gray-600">17:00 - 19:00</p>
+          </div>
+          <a href="#" className="text-orange-500 hover:text-orange-700">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div className="overflow-x-auto no-scrollbar">
+        <div className="flex gap-2 pb-2">
+          <div className="flex-shrink-0 w-24 p-2 bg-white rounded-lg shadow-sm text-center border border-gray-200">
+            <p className="text-sm font-medium text-gray-700">Mon</p>
+            <p className="text-xs text-gray-500">67 hrs</p>
+          </div>
+          <div className="flex-shrink-0 w-24 p-2 bg-white rounded-lg shadow-sm text-center border border-gray-200">
+            <p className="text-sm font-medium text-gray-700">Tue</p>
+            <p className="text-xs text-gray-500">67 hrs</p>
+          </div>
+          <div className="flex-shrink-0 w-24 p-2 bg-white rounded-lg shadow-sm text-center border border-gray-200">
+            <p className="text-sm font-medium text-gray-700">Wed</p>
+            <p className="text-xs text-gray-500">67 hrs</p>
+          </div>
+          <div className="flex-shrink-0 w-24 p-2 bg-white rounded-lg shadow-sm text-center border border-gray-200">
+            <p className="text-sm font-medium text-gray-700">Thus</p>
+            <p className="text-xs text-gray-500">67 hrs</p>
+          </div>
+          <div className="flex-shrink-0 w-24 p-2 bg-white rounded-lg shadow-sm text-center border border-gray-200">
+            <p className="text-sm font-medium text-gray-700">Fri</p>
+            <p className="text-xs text-gray-500">67 hrs</p>
+          </div>
+          <div className="flex-shrink-0 w-24 p-2 bg-white rounded-lg shadow-sm text-center border border-gray-200">
+            <p className="text-sm font-medium text-gray-700">Sat</p>
+            <p className="text-xs text-gray-500">67 hrs</p>
+          </div>
+          <div className="flex-shrink-0 w-24 p-2 bg-white rounded-lg shadow-sm text-center border border-gray-200">
+            <p className="text-sm font-medium text-gray-700">Sun</p>
+            <p className="text-xs text-gray-500">67 hrs</p>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
