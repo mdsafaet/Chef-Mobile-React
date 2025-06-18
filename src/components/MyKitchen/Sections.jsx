@@ -22,14 +22,14 @@ export const Sections = () => {
       {/* Add Section Modal */}
       <dialog id="add_modal" className="modal">
         <div className="modal-box">
-          <h2 className="text-lg font-semibold">Create New Section</h2>
-          <input type="text" placeholder="Enter Section Name" className="input input-bordered w-full my-2 text-sm" />
-          <select className="select select-bordered w-full text-sm">
+          <h2 className="text-lg font-semibold mb-2">Create New Section</h2>
+          <input type="text" placeholder="Enter Section Name" className="w-full px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500 mb-4  shadow-gray-400" />
+          <select className="select select-bordered w-full px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500  shadow-gray-400">
             <option>Select a Main Chef for Section [optional]</option>
             <option value="chef_1">Chef John</option>
             <option value="chef_2">Chef Marie</option>
           </select>
-          <button className="btn w-full mt-4 bg-orange-500 text-white">Save Section</button>
+          <button className="btn block mx-auto w-1/2 mt-4 bg-orange-500 text-white shadow-2xl shadow-orange-700">Save Section</button>
           <div className="modal-action">
             <form method="dialog">
               <button className="btn">Close</button>
@@ -38,8 +38,8 @@ export const Sections = () => {
         </div>
       </dialog>
 
-      {/* Section Overview */}
-      <div className="p-4 sm:p-6 rounded-md space-y-4 mt-4">
+        {/* Section Overview */}
+      <div className="p-4 sm:p-6 rounded-md space-y-4 mt-4 overflow-x-auto ">
         <div className="flex flex-wrap justify-between gap-2">
         <Link to="/section" className="bg-orange-500 text-white px-2 py-2 rounded-md text-sm tab-active">Section</Link>
         <Link to="/pantry-list" className="bg-orange-600 hover:bg-orange-600 text-white px-2 py-2 rounded-md text-sm">Pantry-list</Link>
@@ -47,14 +47,15 @@ export const Sections = () => {
         </div>
 
         <div className="overflow-x-auto w-full mt-2">
-          <div className="flex space-x-2 p-2 min-w-[1000px]">
-            {['Pan', 'Lader', 'Bar', 'Bar', 'Pan', 'Lader', 'Lader', 'Lader', 'Lader', 'Lader'].map((item, idx) => (
-              <div key={idx} className="w-18 h-9 bg-orange-500 rounded-md flex items-center justify-center text-white">
+          <div className="flex space-x-4 p-4 min-w-[1000px]">
+            {["Pan", "Lader", "Prep-list", "Bar", "Pan", "Prep-list", "Prep-list", "Prep-list", "Prep-list", "Prep-list"].map((item, idx) => (
+              <div key={idx} className="w-20 h-10 bg-orange-500 rounded-md flex items-center justify-center text-white">
                 {item}
               </div>
             ))}
           </div>
         </div>
+
 
         {/* Ladder Info + Edit Modal */}
         <div className="flex flex-wrap justify-between items-center mt-4 gap-2">
@@ -67,16 +68,16 @@ export const Sections = () => {
         <dialog id="edit_modal" className="modal">
           <div className="modal-box">
             <h2 className="text-lg font-semibold">Edit Pan</h2>
-            <input type="text" defaultValue="Pan" className="input input-bordered w-full my-2 text-sm" />
-            <select className="select select-bordered w-full text-sm">
+            <input type="text" defaultValue="Pan" className="input input-bordered w-full my-2 text-sm px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500  shadow-gray-400" />
+            <select className="select select-bordered w-full text-sm  px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500 mt-4  shadow-gray-400 z-50">
               <option>Select a Main Chef for Section [optional]</option>
               <option selected value="alexa">Alexa Huson</option>
               <option value="john">John Doe</option>
               <option value="jane">Safaet</option>
             </select>
             <div className="flex justify-start gap-3 pt-4">
-              <button className="btn bg-orange-500 text-white">Update</button>
-              <button className="btn bg-red-500 text-white">Delete</button>
+              <button className="btn bg-green-500 text-white shadow-2xl shadow-green-700">Update</button>
+              <button className="btn bg-red-500 text-white shadow-2xl shadow-red-900">Delete</button>
             </div>
             <div className="modal-action">
               <form method="dialog">
@@ -133,33 +134,46 @@ export const Sections = () => {
 
 
 
-        <dialog id="details_modal" className="modal">
-          <div className="modal-box">
-            <h2 className="text-lg font-semibold mb-4">Staff Details</h2>
-            <p><strong>Name:</strong> Alice</p>
-            <p><strong>Position:</strong> Chef</p>
-            <p><strong>Phone:</strong> 0123456789</p>
-            <p><strong>Status:</strong> Full Time</p>
-            <div className="modal-action">
-              <form method="dialog">
-                <button className="btn">Close</button>
-              </form>
-            </div>
-          </div>
-        </dialog>
+<dialog id="details_modal" className="modal">
+  <div className="modal-box bg-white shadow-xl rounded-lg p-6 max-w-md w-full">
+<h2 className="text-lg font-semibold mb-4 text-gray-800 shadow-md">
+  Staff Details
+</h2>
+<p className="text-gray-700 mb-2 shadow-sm">
+  <strong>Name:</strong> Alice
+</p>
+<p className="text-gray-700 mb-2 shadow-sm">
+  <strong>Position:</strong> Chef
+</p>
+<p className="text-gray-700 mb-2 shadow-sm">
+  <strong>Phone:</strong> 0123456789
+</p>
+<p className="text-gray-700 mb-2 shadow-sm">
+  <strong>Status:</strong> Full Time
+</p>
+    <div className="modal-action mt-4">
+      <form method="dialog">
+        <button className="btn bg-blue-500 text-white px-4 py-2 rounded-md shadow-lg hover:bg-blue-600 transition">
+          Close
+        </button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
 
         <dialog id="assign_modal" className="modal">
           <div className="modal-box">
             <h2 className="text-lg font-semibold mb-4">Assign to Section</h2>
-            <select className="select select-bordered w-full text-sm mb-3">
+            <select className="select select-bordered w-full text-sm mb-3 inset-shadow-sm shadow-xl/30">
               <option>Select a Section</option>
               <option>Kitchen</option>
               <option>Service</option>
             </select>
             <div className="modal-action">
-              <button className="btn bg-orange-500 text-white">Assign</button>
+              <button className="btn bg-orange-500 text-white shadow-2xl shadow-orange-700">Assign</button>
               <form method="dialog">
-                <button className="btn">Cancel</button>
+                <button className="btn inset-shadow-sm shadow-xl/30">Cancel</button>
               </form>
             </div>
           </div>

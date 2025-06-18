@@ -6,7 +6,9 @@ import { Dashboard } from "../pages/Dashboard";
 import { ManageTeam } from "../Admin/ManageTeam";
 import { AddStaff } from "../Admin/AddStaff";
 import { RosterManagement } from "../Admin/RosterManagement";
-import { EditStaff } from "../Admin/EditStaff";
+import { EditStaff } from "../Admin/EditStaff"
+import AddToPantry from "../MyKitchen/AddToPantry";
+import AbcFood from "../MyKitchen/AbcFood";
 
 
 
@@ -29,6 +31,7 @@ const routes =createBrowserRouter([
       path: "/dashboard",
       element: <Dashboard />,
     },
+
      {
       path: "/manage-team",
       element: <ManageTeam />,
@@ -47,7 +50,18 @@ const routes =createBrowserRouter([
     },
     
    
-   
+
+             {
+      path: "/add-to-pantry",
+      element: <AddToPantry />,
+    },
+
+                 {
+      path: "/abc-food",
+      element: <AbcFood />,
+    },
+
+
 
 
 ]);
