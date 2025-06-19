@@ -21,7 +21,7 @@ export const ManageTeam = () => {
 
       <main className="max-w-full mx-auto p-4">
         <div className="flex bg-gray-200 rounded-lg overflow-hidden shadow-sm mb-6">
-          <button className="flex-1 py-3 text-center text-gray-800 font-semibold bg-white border-b-2 border-orange-500 rounded-lg text-sm">Manage Team</button>
+          <button className="flex-1 py-3 text-center text-white font-semibold bg-orange-500 border-b-2 border-gray-600 rounded-lg text-sm">Manage Team</button>
           <button className="flex-1 py-3 text-center text-gray-600 text-sm">Manage Roster</button>
         </div>
 
@@ -51,7 +51,7 @@ export const ManageTeam = () => {
             </a>
           </nav>
         </div>
-
+  
         <div className="bg-white rounded-lg shadow-md overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
