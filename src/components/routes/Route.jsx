@@ -10,6 +10,7 @@ import { EditStaff } from "../Admin/EditStaff"
 import AddToPantry from "../MyKitchen/AddToPantry";
 import AbcFood from "../MyKitchen/AbcFood";
 import Preplist from "../MyKitchen/Preplist";
+import AddToCart from "../pages/AddToCart";
 
 
 
@@ -78,6 +79,12 @@ const routes =createBrowserRouter([
   {
       path: "/prep-list",
       element: <Preplist/>,
+    },
+
+
+      {
+      path: "/add-to-cart",
+      element: <AddToCart/>,
     },
 
 
