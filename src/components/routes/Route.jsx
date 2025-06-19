@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router"
+import { createBrowserRouter, Navigate } from "react-router"
 import { MainLayout } from "../layouts/MainLayout";
 import { Sections } from "../MyKitchen/Sections";
 import { PantryList } from "../MyKitchen/PantryList";
@@ -61,17 +61,26 @@ const routes =createBrowserRouter([
       path: "/abc-food",
       element: <AbcFood />,
     },
-                    {
+
+
+    {
       path: "/prep-list",
       element: <Preplist/>,
     },
    
     
 
-        {
+ {
     path: "*",
     element: <Navigate to="/"  />,
-  },
+  },  
+  
+  {
+      path: "/prep-list",
+      element: <Preplist/>,
+    },
+
+
 
 
 

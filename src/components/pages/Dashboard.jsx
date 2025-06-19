@@ -15,16 +15,7 @@ export const Dashboard = () => {
         <p className="text-xl text-black text-center">My Kitchen</p>
       </Link>
       
-      
-      <a href="#" className="p-5  rounded-md text-orange-500 flex flex-col items-center justify-center shadow-xl shadow-gray-400">
-        <i className="fi fi-ss-users-alt text-[48px] mb-2"></i>
-        <p className="text-xl text-black text-center">Admin</p>
-      </a>
-      
-      <Link to={'/section'} className="p-5  rounded-md text-orange-500 flex flex-col items-center justify-center shadow-xl shadow-gray-400">
-        <i className="fi fi-ss-kitchen-set text-[48px] mb-2"></i>
-        <p className="text-xl text-black text-center">My Kitchen</p>
-      </Link>
+    
       <a href="#" className="p-5  rounded-md text-orange-500 flex flex-col items-center justify-center shadow-xl shadow-gray-400">
 
         <i className="fi fi-ss-supplier-alt text-[48px] mb-2"></i>
