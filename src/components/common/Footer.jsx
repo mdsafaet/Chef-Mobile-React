@@ -44,12 +44,12 @@ export const Footer = () => {
         </div>
 
         {/* Icon 5 - Cart */}
-        <div className="flex flex-col items-center text-gray-400">
+        <Link to={'/add-to-cart'} className="flex flex-col items-center text-gray-400">
           <a href="#">
             <i className="fi fi-rr-shopping-cart-add text-xl"></i>
           </a>
           <p className="text-xs">Cart</p>
-        </div>
+        </Link>
       </div>
     </div>
 

@@ -5,6 +5,7 @@ import { BiTransfer } from 'react-icons/bi'
 import { FiTrash2 } from 'react-icons/fi'
 import { Link } from 'react-router'
 import NavButton from './NavButton'
+import ActiveTab from './ActiveTab'
 
 export const Sections = () => {
   return (
@@ -74,7 +75,8 @@ export const Sections = () => {
           </button>
         </div>
 
-        <dialog id="edit_modal" className="modal">
+
+          <dialog id="edit_modal" className="modal">
           <div className="modal-box">
             <h2 className="text-sm text-white ">Edit Pan</h2>
             <input type="text" defaultValue="Pan" className="input input-bordered w-full my-2 text-sm px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500  shadow-gray-400" />
@@ -96,97 +98,9 @@ export const Sections = () => {
           </div>
         </dialog>
 
-        {/* Staff Card Example */}
-    <div className="relative bg-white rounded-xl p-4 w-60 text-center shadow-xl shadow-gray-400 mx-auto">
-      {/* Swap icon (top right) */}
-      <button className="absolute top-2 right-2 bg-yellow-400 hover:bg-yellow-500 text-white p-1 rounded">
-        <BiTransfer className="w-4 h-4" />
-      </button>
+        <ActiveTab />
 
-      {/* Profile Image */}
-      <img
-        src="https://randomuser.me/api/portraits/women/32.jpg"
-        alt="Profile"
-        className="w-20 h-20 mx-auto rounded-full mb-2 border shadow"
-      />
-
-      {/* Name */}
-      <p className="text-base font-semibold text-gray-800 mb-4">Alice</p>
-
-      {/* Action Buttons: Details & Assign */}
-<div className="flex justify-center gap-2 px-2">
-  <button
-    className="text-xs bg-blue-500 text-white px-3 py-1 rounded"
-    onClick={() => document.getElementById("details_modal").showModal()}
-  >
-    Details
-  </button>
-
-  <button
-    className="text-xs bg-green-500 text-white px-3 py-1 rounded"
-    onClick={() => document.getElementById("assign_modal").showModal()}
-  >
-    Assign
-  </button>
-</div>
-
-      {/* Delete icon + label (bottom right corner) */}
-      <div className="absolute bottom-2 right-2 flex flex-col items-center gap-1">
-        <button className="bg-red-500 hover:bg-red-600 text-white p-1 rounded-full">
-          <FiTrash2 className="w-4 h-4" />
-        </button>
-        <span className="text-[10px] text-gray-600"></span>
-      </div>
-    </div>
-
-
-
-
-
-<dialog id="details_modal" className="modal">
-  <div className="modal-box bg-white shadow-xl rounded-lg p-6 max-w-md w-full">
-<h2 className="text-lg font-semibold mb-4 text-gray-800 shadow-md">
-  Staff Details
-</h2>
-<p className="text-gray-700 mb-2 shadow-sm">
-  <strong>Name:</strong> Alice
-</p>
-<p className="text-gray-700 mb-2 shadow-sm">
-  <strong>Position:</strong> Chef
-</p>
-<p className="text-gray-700 mb-2 shadow-sm">
-  <strong>Phone:</strong> 0123456789
-</p>
-<p className="text-gray-700 mb-2 shadow-sm">
-  <strong>Status:</strong> Full Time
-</p>
-    <div className="modal-action mt-4">
-      <form method="dialog">
-        <button className="btn bg-blue-500 text-white px-4 py-2 rounded-md shadow-lg hover:bg-blue-600 transition">
-          Close
-        </button>
-      </form>
-    </div>
-  </div>
-</dialog>
-
-
-        <dialog id="assign_modal" className="modal">
-          <div className="modal-box">
-            <h2 className="text-lg font-semibold mb-4">Assign to Section</h2>
-            <select className="select select-bordered w-full text-sm mb-3 inset-shadow-sm shadow-xl/30">
-              <option>Select a Section</option>
-              <option>Kitchen</option>
-              <option>Service</option>
-            </select>
-            <div className="modal-action">
-              <button className="btn bg-orange-500 text-white shadow-2xl shadow-orange-700">Assign</button>
-              <form method="dialog">
-                <button className="btn inset-shadow-sm shadow-xl/30">Cancel</button>
-              </form>
-            </div>
-          </div>
-        </dialog>
+ 
       </div>
     </div>
     <Footer />
