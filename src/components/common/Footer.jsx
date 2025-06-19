@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
 <div className="fixed bottom-0 left-0 right-0 w-full z-50 bg-white rounded-4xl shadow-xl">
       <div className="grid grid-cols-5 items-center text-center py-2">
-        {/* Icon 1 - Delivery */}
+        {/* Icon 1 - Delivery eee*/}
         <div className="flex flex-col items-center text-gray-400">
           <a href="#">
             <i className="fi fi-rr-shipping-fast text-xl"></i>
