@@ -78,7 +78,7 @@ export const Sections = () => {
 
           <dialog id="edit_modal" className="modal">
           <div className="modal-box">
-            <h2 className="text-sm text-white ">Edit Pan</h2>
+            <h2 className="text-lg font-semibold mb-2 ">Edit Pan</h2>
             <input type="text" defaultValue="Pan" className="input input-bordered w-full my-2 text-sm px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500  shadow-gray-400" />
             <select className="select select-bordered w-full text-sm  px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500 mt-4  shadow-gray-400 z-50">
               <option>Select a Main Chef for Section [optional]</option>
