@@ -5,8 +5,8 @@ export const Nav = () => {
 
      const [mobileOpen, setMobileOpen] = useState(false);
   return (
-    <div>
- <div className="w-full">
+
+ <div className="w-95 mx-auto">
       <h2 className="text-xl font-semibold text-center mb-5">Mixing Pot Restaurant</h2>
 
       <div className="relative flex justify-between items-center bg-white rounded-2xl p-5 mb-6 shadow-xl shadow-gray-400">
@@ -46,7 +46,6 @@ export const Nav = () => {
           )}
         </div>
       </div>
-    </div>
     </div>
   )
 }

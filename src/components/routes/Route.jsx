@@ -9,8 +9,12 @@ import { RosterManagement } from "../Admin/RosterManagement";
 import { EditStaff } from "../Admin/EditStaff"
 import AddToPantry from "../MyKitchen/AddToPantry";
 import AbcFood from "../MyKitchen/AbcFood";
+
 import { EditRoster } from "../Admin/EditRoster";
 import StaffSchedule from "../Admin/StaffSchedule";
+
+import Preplist from "../MyKitchen/Preplist";
+
 
 
 
@@ -66,12 +70,27 @@ const routes =createBrowserRouter([
       path: "/abc-food",
       element: <AbcFood />,
     },
+
       {
       path: "/staff-schedule",
       element: <StaffSchedule />
     },
     
     
+
+     {
+      path: "/prep-list",
+      element: <Preplist/>,
+    },
+   
+    
+
+        {
+    path: "*",
+    element: <Navigate to="/"  />,
+  },
+
+
 
 
 
