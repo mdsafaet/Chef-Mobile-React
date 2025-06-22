@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router"
+import { createBrowserRouter, Navigate } from "react-router"
 import { MainLayout } from "../layouts/MainLayout";
 import { Sections } from "../MyKitchen/Sections";
 import { PantryList } from "../MyKitchen/PantryList";
@@ -14,6 +14,8 @@ import { EditRoster } from "../Admin/EditRoster";
 import StaffSchedule from "../Admin/StaffSchedule";
 
 import Preplist from "../MyKitchen/Preplist";
+import StaffScheduleDay from "../Admin/StaffScheduleDay";
+import Attendance from "../Admin/Attendance";
 
 
 
@@ -85,9 +87,17 @@ const routes =createBrowserRouter([
    
     
 
-        {
+      {
     path: "*",
     element: <Navigate to="/"  />,
+  },
+  {
+    path: "/day-staff",
+    element: <StaffScheduleDay />,
+  },
+  {
+    path: "/attendance",
+    element: <Attendance />,
   },
 
 
