@@ -1,14 +1,39 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Link, NavLink } from 'react-router'
 
 const NavButton = () => {
   return (
     <div>
         <div className="flex bg-gray-200 rounded-lg overflow-hidden shadow-sm mb-6">
-        <Link to={'/section'} className="flex-1 py-3 text-center bg-orange-500 font-semibol text-white  border-b-2 border-orange-500 rounded-lg text-sm">Section</Link>
-        <Link to={'/pantry-list'} className="flex-1 py-3 text-center  text-sm">Pantry-list</Link>
-        <Link to={'/prep-list'} className="flex-1 py-3 text-center   text-sm">Prep-list</Link>
+       <NavLink
+  to="/section"
+  className={({ isActive }) =>
+    `flex-1 py-3 text-center ${isActive ? 'bg-orange-500 font-semibold text-white border-b-2 border-orange-500' : 'text-sm'} rounded-lg text-sm`
+}
+>
+  Section
+</NavLink>
+
+<NavLink
+  to="/pantry-list"
+  className={({ isActive }) =>
+    `flex-1 py-3 text-center ${isActive ? 'bg-orange-500 font-semibold text-white border-b-2 border-orange-500' : 'text-sm'}`
+  }
+>
+  Pantry-list
+</NavLink>
+
+<NavLink
+  to="/prep-list"
+  className={({ isActive }) =>
+    `flex-1 py-3 text-center ${isActive ? 'bg-orange-500 font-semibold text-white border-b-2 border-orange-500' : 'text-sm'}`
+  }
+>
+  Prep-list
+</NavLink>
       </div>
+
+     
     </div>
   )
 }

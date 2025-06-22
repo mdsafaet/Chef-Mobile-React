@@ -10,8 +10,14 @@ import { EditStaff } from "../Admin/EditStaff"
 import AddToPantry from "../MyKitchen/AddToPantry";
 import AbcFood from "../MyKitchen/AbcFood";
 
+
 import { EditRoster } from "../Admin/EditRoster";
 import StaffSchedule from "../Admin/StaffSchedule";
+
+
+
+
+
 
 import Preplist from "../MyKitchen/Preplist";
 
@@ -19,6 +25,7 @@ import StaffScheduleDay from "../Admin/StaffScheduleDay";
 import Attendance from "../Admin/Attendance";
 
 import AddToCart from "../pages/AddToCart";
+
 
 
 import { ProductList } from "../Suppliers/ProductList";
@@ -123,6 +130,7 @@ const routes =createBrowserRouter([
       element: <Preplist/>,
     },
 
+
 {
 
       path: "/product-list",
@@ -144,10 +152,12 @@ const routes =createBrowserRouter([
   path:"/orders/repeat",
   element:<RepeatOrder />,
 },
+
   {
   path:"/orders/orderlist",
   element:<OrderList />,
 },
+
 
       {
       path: "/add-to-cart",
