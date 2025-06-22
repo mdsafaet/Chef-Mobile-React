@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router"
+import { createBrowserRouter, Navigate } from "react-router"
 import { MainLayout } from "../layouts/MainLayout";
 import { Sections } from "../MyKitchen/Sections";
 import { PantryList } from "../MyKitchen/PantryList";
@@ -9,12 +9,16 @@ import { RosterManagement } from "../Admin/RosterManagement";
 import { EditStaff } from "../Admin/EditStaff"
 import AddToPantry from "../MyKitchen/AddToPantry";
 import AbcFood from "../MyKitchen/AbcFood";
+
+import { EditRoster } from "../Admin/EditRoster";
+import StaffSchedule from "../Admin/StaffSchedule";
+
 import Preplist from "../MyKitchen/Preplist";
 import { ProductList } from "../Suppliers/ProductList";
 import { ManageSupplier } from "../Suppliers/ManageSupplier";
 import { SupplierDetails } from "../Suppliers/SupplierDetails";
 import { OrderHistory } from "../Orders/OrderHistory";
-
+import { RepeatOrder } from "../Orders/RepeatOrder";
 
 const routes =createBrowserRouter([
 
@@ -52,22 +56,40 @@ const routes =createBrowserRouter([
       path: "/roster",
       element: <RosterManagement/>,
     },
+     {
+      path: "/edit-roster",
+      element: <EditRoster />
+    },
     
    
 
-             {
+      {
       path: "/add-to-pantry",
       element: <AddToPantry />,
     },
 
-                 {
+      {
       path: "/abc-food",
       element: <AbcFood />,
     },
-                    {
+
+
+      {
+      path: "/staff-schedule",
+      element: <StaffSchedule />
+    },
+    
+    
+
+     
+
+    {
+
       path: "/prep-list",
       element: <Preplist/>,
     },
+
+
     {
       path: "/product-list",
       element: <ProductList />,
@@ -83,7 +105,12 @@ const routes =createBrowserRouter([
    {
   path: "/orders/history",
   element: <OrderHistory />,
+},
+  {
+  path:"/orders/repeat",
+  element:<RepeatOrder />,
 }
+
 
 
 
