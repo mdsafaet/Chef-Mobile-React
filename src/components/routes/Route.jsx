@@ -10,7 +10,10 @@ import { EditStaff } from "../Admin/EditStaff"
 import AddToPantry from "../MyKitchen/AddToPantry";
 import AbcFood from "../MyKitchen/AbcFood";
 import Preplist from "../MyKitchen/Preplist";
-
+import { ProductList } from "../Suppliers/ProductList";
+import { ManageSupplier } from "../Suppliers/ManageSupplier";
+import { SupplierDetails } from "../Suppliers/SupplierDetails";
+import { OrderHistory } from "../Orders/OrderHistory";
 
 
 const routes =createBrowserRouter([
@@ -65,6 +68,23 @@ const routes =createBrowserRouter([
       path: "/prep-list",
       element: <Preplist/>,
     },
+    {
+      path: "/product-list",
+      element: <ProductList />,
+    },
+   {
+  path: "/suupliers/home",
+  element: <ManageSupplier />,
+},
+   {
+  path: "/suppliers/details",
+  element: <SupplierDetails />,
+},
+   {
+  path: "/orders/history",
+  element: <OrderHistory />,
+}
+
 
 
 
