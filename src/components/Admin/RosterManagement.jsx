@@ -13,7 +13,7 @@ export const RosterManagement = () => {
         <button className="flex-1 py-3 text-center text-gray-600 text-sm">Staff Attendance</button>
       </div>
       
-    <div className="flex mb-6 max-h-[50vh] max-w-[100vw] overflow-y-auto  grid grid-cols-1 gap-4 mb-6 shadow-gray-300 shadow-xl">
+    <div className="max-h-[50vh] max-w-[100vw] overflow-y-auto  grid grid-cols-1 gap-4 mb-6 shadow-gray-300 shadow-xl">
 
       <div className="grid grid-cols-2 gap-4 mb-6 shadow-gray-300 shadow-xl">
         <div className="bg-gray-50 p-4 rounded-lg shadow-gray-300 shadow-xl flex items-center justify-between">
