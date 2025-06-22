@@ -118,7 +118,7 @@ const Attendance = () => {
         <div className="flex gap-2">
           <button
             onClick={() => setActiveTab('roster')}
-            className={`flex-1 rounded-full px-4 py-2 text-sm font-medium bg-orange-600 `}
+            className={`flex-1 rounded-full px-4 py-2 text-sm font-medium bg-orange-400 `}
           >
             R/H &rarr; Roster Assigned Hours
           </button>
