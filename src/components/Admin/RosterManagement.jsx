@@ -13,13 +13,23 @@ export const RosterManagement = () => {
         <button className="flex-1 py-3 text-center text-gray-600 text-sm">Staff Attendance</button>
       </div>
       
+
     <div className="flex mb-6 max-h-[50vh] max-w-[100vw] overflow-y-auto  grid grid-cols-1 gap-4 mb-6 shadow-gray-300 shadow-xl">
      <div class="flex justify start">
   <button className="flex items-center px-2 py-1 bg-orange-500 text-white rounded-md shadow-md text-xs">
     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
     </svg>
-    Create Shift
+
+    <div className="max-h-[50vh] max-w-[100vw] overflow-y-auto  grid grid-cols-1 gap-4 mb-6 shadow-gray-300 shadow-xl">
+     <div className="flex justify start">
+  <button className="flex items-center px-2 py-1 bg-orange-500 text-white rounded-md shadow-md text-xs"
+    onClick={() => document.getElementById('create_shift_modal').showModal()}
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
+    </svg>
+
   </button>
 </div>
 
@@ -234,7 +244,56 @@ export const RosterManagement = () => {
       
       <Footer />
       </main>
-      
+<dialog id="create_shift_modal" className="modal">
+  <div className="modal-box max-w-xl">
+    <h2 className="text-lg font-semibold mb-4">Create New Shift</h2>
+
+    {/* Shift Name */}
+    <input
+      type="text"
+      placeholder="Enter Shift Name"
+      className="w-full mb-4 px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-gray-400"
+    />
+
+    {/* Shift Label */}
+    <select className="select select-bordered w-full mb-4 px-4 py-2 border-2 border-white rounded-lg inset-shadow-sm shadow-xl/30 focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-gray-400">
+      <option>Select Shift Label</option>
+      <option value="Morning">Morning</option>
+      <option value="Evening">Evening</option>
+      <option value="Night">Night</option>
+    </select>
+
+    {/* Shift Duration */}
+    <div className="mb-4">
+      <p className="font-semibold mb-1">Shift Duration</p>
+      <div className="flex gap-2">
+        <input type="time" className="input input-bordered w-full" placeholder="From" />
+        <input type="time" className="input input-bordered w-full" placeholder="To" />
+      </div>
+    </div>
+
+    {/* Break Duration */}
+    <div className="mb-4">
+      <p className="font-semibold mb-1">Break Duration</p>
+      <div className="flex gap-2">
+        <input type="time" className="input input-bordered w-full" placeholder="From" />
+        <input type="time" className="input input-bordered w-full" placeholder="To" />
+      </div>
+    </div>
+
+    {/* Save Button */}
+    <button className="btn block mx-auto w-1/2 mt-4 bg-orange-500 text-white shadow-2xl shadow-orange-700">
+      Save Shift
+    </button>
+
+    <div className="modal-action">
+      <form method="dialog">
+        <button className="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
     </div>
     
   );

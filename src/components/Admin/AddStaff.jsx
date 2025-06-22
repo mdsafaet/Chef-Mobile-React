@@ -15,7 +15,7 @@ export const AddStaff = () => {
          
             
             
-            <h1 className="text-xl  md:text-2xl font-semibold text-gray-800">Add Staff</h1>
+            <h1 className="text-xl  md:text-2xl font-semibold text-gray-800" >Add Staff</h1>
           
           <div className="flex items-center space-x-4">
             <div className="hidden  md:flex items-center space-x-4">
@@ -108,7 +108,13 @@ export const AddStaff = () => {
       </div>
 
         <Footer />
+
+
+
+
     </div>
+
+    
   
   );
 };

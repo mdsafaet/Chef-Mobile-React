@@ -10,8 +10,22 @@ import { EditStaff } from "../Admin/EditStaff"
 import AddToPantry from "../MyKitchen/AddToPantry";
 import AbcFood from "../MyKitchen/AbcFood";
 
+
 import { EditRoster } from "../Admin/EditRoster";
 import StaffSchedule from "../Admin/StaffSchedule";
+
+
+import { EditRoster } from "../Admin/EditRoster";
+import StaffSchedule from "../Admin/StaffSchedule";
+
+import Preplist from "../MyKitchen/Preplist";
+
+import StaffScheduleDay from "../Admin/StaffScheduleDay";
+import Attendance from "../Admin/Attendance";
+
+import AddToCart from "../pages/AddToCart";
+
+
 
 import Preplist from "../MyKitchen/Preplist";
 import { ProductList } from "../Suppliers/ProductList";
@@ -88,9 +102,36 @@ const routes =createBrowserRouter([
       path: "/prep-list",
       element: <Preplist/>,
     },
+   
+    
 
 
-    {
+      {
+    path: "*",
+    element: <Navigate to="/"  />,
+  },
+  {
+    path: "/day-staff",
+    element: <StaffScheduleDay />,
+  },
+  {
+    path: "/attendance",
+    element: <Attendance />,
+  },
+
+ {
+    path: "*",
+    element: <Navigate to="/"  />,
+  },  
+  
+  {
+
+      path: "/prep-list",
+      element: <Preplist/>,
+    },
+
+
+
       path: "/product-list",
       element: <ProductList />,
     },
@@ -110,6 +151,14 @@ const routes =createBrowserRouter([
   path:"/orders/repeat",
   element:<RepeatOrder />,
 }
+
+      {
+      path: "/add-to-cart",
+      element: <AddToCart/>,
+    },
+
+
+
 
 
 
