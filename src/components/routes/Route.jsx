@@ -19,21 +19,23 @@ import StaffScheduleDay from "../Admin/StaffScheduleDay";
 import Attendance from "../Admin/Attendance";
 
 import AddToCart from "../pages/AddToCart";
-
-
+import Login from "../authentication/login";
+import OrdersHome from "../Orders/OrdersHome";
 
 const routes =createBrowserRouter([
-
+ {
+    path: "*",
+    element: <Navigate to="/"  />,
+  },
     {
       path: "/",
       element: <MainLayout />,
     },
-
     {
       path: "/section",
       element: <Sections />,
     },
-     {
+    {
       path: "/Pantry-List",
       element: <PantryList />,
     },
@@ -41,8 +43,7 @@ const routes =createBrowserRouter([
       path: "/dashboard",
       element: <Dashboard />,
     },
-
-     {
+    {
       path: "/manage-team",
       element: <ManageTeam />,
     },
@@ -58,13 +59,12 @@ const routes =createBrowserRouter([
       path: "/roster",
       element: <RosterManagement/>,
     },
-     {
+    {
       path: "/edit-roster",
       element: <EditRoster />
     },
     
    
-
       {
       path: "/add-to-pantry",
       element: <AddToPantry />,
@@ -93,11 +93,6 @@ const routes =createBrowserRouter([
    
     
 
-
-      {
-    path: "*",
-    element: <Navigate to="/"  />,
-  },
   {
     path: "/day-staff",
     element: <StaffScheduleDay />,
@@ -107,10 +102,7 @@ const routes =createBrowserRouter([
     element: <Attendance />,
   },
 
- {
-    path: "*",
-    element: <Navigate to="/"  />,
-  },  
+
   
   {
       path: "/prep-list",
@@ -123,7 +115,16 @@ const routes =createBrowserRouter([
       element: <AddToCart/>,
     },
 
-
+    //fardin
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/orders/home",
+      element: <OrdersHome />,
+    },
+    //fardin
 
 
 

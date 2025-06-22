@@ -8,11 +8,9 @@ export const MainLayout = () => {
   return (
     <div>
         <Nav />
-<ClockIn />
+          <ClockIn />
           <Dashboard />
-         <Footer />   
-
-         
+         <Footer />  
     </div>
   )
 }
