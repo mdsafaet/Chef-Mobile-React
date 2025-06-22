@@ -13,10 +13,20 @@ export const RosterManagement = () => {
         <button className="flex-1 py-3 text-center text-gray-600 text-sm">Staff Attendance</button>
       </div>
       
-    <div className="max-h-[50vh] max-w-[100vw] overflow-y-auto  grid grid-cols-1 gap-4 mb-6 shadow-gray-300 shadow-xl">
+    <div className="flex mb-6 max-h-[50vh] max-w-[100vw] overflow-y-auto  grid grid-cols-1 gap-4 mb-6 shadow-gray-300 shadow-xl">
+     <div class="flex justify start">
+  <button className="flex items-center px-2 py-1 bg-orange-500 text-white rounded-md shadow-md text-xs">
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
+    </svg>
+    Create Shift
+  </button>
+</div>
 
       <div className="grid grid-cols-2 gap-4 mb-6 shadow-gray-300 shadow-xl">
+        
         <div className="bg-gray-50 p-4 rounded-lg shadow-gray-300 shadow-xl flex items-center justify-between">
+          
           <div>
             <h3 className="text-lg font-semibold text-orange-700">Dinner</h3>
             <p className="text-sm text-gray-600">16:30 - 22:00</p>
