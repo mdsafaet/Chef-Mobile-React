@@ -3,6 +3,7 @@ import { Nav } from '../common/Nav';
 import { Footer } from '../common/Footer';
 import React, { useState } from 'react';
 import MainAction from "./MainAction";
+import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { FaClipboardList } from 'react-icons/fa';
 import { FaFolderOpen } from "react-icons/fa";
@@ -79,7 +80,7 @@ export const ProductList = () => {
         <div className="flex justify-center">
           <button
             onClick={() => setShowModal(true)}
-            className="bg-orange-500 text-white  shadow-xl shadow-gray-400 px-2 py-2 rounded-full lg:w-2/5 w-64"
+            className="bg-orange-500 text-white  shadow-xl shadow-gray-200 px-2 py-2 rounded-full lg:w-2/5 w-64"
           >
             Connect Supplier Using Token
           </button>
@@ -179,18 +180,20 @@ export const ProductList = () => {
                 <td className="py-3">
                   <div className="flex justify-center">
                     
-      <Link to="/suupliers/home"> {/* Wrap the icon with the Link component */}
-      <FaClipboardList
-        className="text-orange-500"
-        size="2em"
-          
-      />
-      </Link>
+  <NavLink
+  to="/suupliers/home"
+  style={({ isActive }) => ({
+    color: isActive ? 'blue' : '#F97316', // Change color based on active state
+  })}
+>
+  <FaClipboardList size="2em" />
+</NavLink>
                   </div>
                 </td>
                 <td className="py-3">
                   <div className="flex justify-center">
-                    <Link to="/suppliers/details"> {/* Wrap the icon with the Link component */}
+                    
+                    <Link to="/suppliers/details"> 
         <FaFolderOpen className="text-orange-500" size="2em" />
       </Link>
                   </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import { Nav } from '../common/Nav';
 import { Footer } from '../common/Footer';
 import { FaSearch } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 export const OrderHistory = () => {
   return (
     <div className='font-sans w-full min-h-screen bg-white m-0 p-0 pb-16'>
@@ -90,10 +91,11 @@ export const OrderHistory = () => {
 <td className="px-6 py-4 whitespace-nowrap font-semibold w-40 text-black">Jun 22, 2025</td>
 <td className="py-3 px-4">
     <div className='flex justify-center'>
-                             <FaSearch
-  className="text-xl text-orange-300 cursor-pointer"
- 
-/>
+                             <Link to="/orders/orderlist"> 
+    <FaSearch
+      className="text-xl text-orange-300 cursor-pointer"
+    />
+  </Link>
     </div>
 
                     </td>
@@ -106,10 +108,11 @@ export const OrderHistory = () => {
 <td className="px-6 py-4 whitespace-nowrap font-semibold w-40 text-black">Jun 22, 2025</td>
 <td className="py-3 px-4">
     <div className='flex justify-center'>
-                             <FaSearch
-  className="text-xl text-orange-300 cursor-pointer"
- 
-/>
+                                                        <Link to="/orders/orderlist"> 
+    <FaSearch
+      className="text-xl text-orange-300 cursor-pointer"
+    />
+  </Link>
     </div>
 
                     </td>
@@ -122,10 +125,11 @@ export const OrderHistory = () => {
 <td className="px-6 py-4 whitespace-nowrap font-semibold w-40 text-black">Jun 22, 2025</td>
 <td className="py-3 px-4">
     <div className='flex justify-center'>
-                             <FaSearch
-  className="text-xl text-orange-300 cursor-pointer"
- 
-/>
+                           <Link to="/orders/orderlist"> 
+    <FaSearch
+      className="text-xl text-orange-300 cursor-pointer"
+    />
+  </Link>
     </div>
 
                     </td>

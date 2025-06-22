@@ -10,11 +10,6 @@ import { EditStaff } from "../Admin/EditStaff"
 import AddToPantry from "../MyKitchen/AddToPantry";
 import AbcFood from "../MyKitchen/AbcFood";
 
-
-import { EditRoster } from "../Admin/EditRoster";
-import StaffSchedule from "../Admin/StaffSchedule";
-
-
 import { EditRoster } from "../Admin/EditRoster";
 import StaffSchedule from "../Admin/StaffSchedule";
 
@@ -26,14 +21,12 @@ import Attendance from "../Admin/Attendance";
 import AddToCart from "../pages/AddToCart";
 
 
-
-import Preplist from "../MyKitchen/Preplist";
 import { ProductList } from "../Suppliers/ProductList";
 import { ManageSupplier } from "../Suppliers/ManageSupplier";
 import { SupplierDetails } from "../Suppliers/SupplierDetails";
 import { OrderHistory } from "../Orders/OrderHistory";
 import { RepeatOrder } from "../Orders/RepeatOrder";
-
+import { OrderList} from "../Orders/OrderList";
 const routes =createBrowserRouter([
 
     {
@@ -130,7 +123,7 @@ const routes =createBrowserRouter([
       element: <Preplist/>,
     },
 
-
+{
 
       path: "/product-list",
       element: <ProductList />,
@@ -150,18 +143,16 @@ const routes =createBrowserRouter([
   {
   path:"/orders/repeat",
   element:<RepeatOrder />,
-}
+},
+  {
+  path:"/orders/orderlist",
+  element:<OrderList />,
+},
 
       {
       path: "/add-to-cart",
       element: <AddToCart/>,
     },
-
-
-
-
-
-
 
 
 

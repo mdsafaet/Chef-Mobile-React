@@ -162,8 +162,8 @@ const [modalTitle, setModalTitle] = useState('');
               }}>
                   <tr>
                     <th scope="col"  className="px-6 py-3 text-left text-orange-500  tracking-wider whitespace-nowrap"></th>
-                    <th scope="col"  className="px-6 py-3 text-left text-orange-500  tracking-wider whitespace-nowrap">SKU</th>
-                    <th scope="col"  className="px-6 py-3 text-left text-orange-500  tracking-wider whitespace-nowrap">Product</th>
+                    <th scope="col"  className="px-6 py-3 text-left   tracking-wider whitespace-nowrap">SKU</th>
+                    <th scope="col"  className="px-6 py-3 text-left tracking-wider whitespace-nowrap">Product</th>
                     <th scope="col"  className="px-6 py-3 text-left text-orange-500  tracking-wider whitespace-nowrap">Description</th>
                     <th scope="col"  className="px-6 py-3 text-left text-orange-500  tracking-wider whitespace-nowrap">Sub Category</th>
                     <th scope="col"  className="px-6 py-3 text-left text-orange-500  tracking-wider whitespace-nowrap">Unit Price</th>
@@ -270,19 +270,19 @@ const [modalTitle, setModalTitle] = useState('');
               <div className="w-full sm:w-2/5 mt-4 sm:mt-0">
                 <div className="space-y-1">
                   <div>
-                    <strong className="text-orange-500">Brand:</strong>
+                    <strong className="">Brand:</strong>
                     <span className="text-gray-600">A1C Traming</span>
                   </div>
                   <div>
-                    <strong className="text-orange-500">Cost:</strong>
+                    <strong className="">Cost:</strong>
                     <span className="text-gray-600">1 kg</span>
                   </div>
                   <div>
-                    <strong className="text-orange-500">SKU:</strong>
+                    <strong className="">SKU:</strong>
                     <span className="text-gray-600">EFL-3,855</span>
                   </div>
                   <div className="flex items-center space-x-2 mt-2">
-                    <strong className="text-orange-500">Price:</strong>
+                    <strong className="">Price:</strong>
                     <span className="text-lg font-semibold text-gray-900">$7.02</span>
                   </div>
                 </div>
