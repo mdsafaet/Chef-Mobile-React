@@ -4,7 +4,9 @@ import { Footer } from '../common/Footer';
 import { BiChevronDown, BiChevronUp, BiInfoCircle } from 'react-icons/bi';
 export const OrderList = () => {
   return (
-       <div className="bg-white p-0 m-0 pb-16 min-h-screen  w-full ">
+    
+    <div className="bg-white p-0 m-0 pb-16 min-h-screen  w-full ">
+         {/* order details page */}
         <div className='rounded-lg shadow-lg '>
            {/* Header Part */}
                       <Nav />
