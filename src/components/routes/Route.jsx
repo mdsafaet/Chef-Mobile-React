@@ -1,5 +1,5 @@
 import { createBrowserRouter, Navigate } from "react-router"
-import { MainLayout } from "../layouts/MainLayout";
+import { MainLayout } from "../pages/MainLayout";
 import { Sections } from "../MyKitchen/Sections";
 import { PantryList } from "../MyKitchen/PantryList";
 import { Dashboard } from "../pages/Dashboard";
@@ -15,18 +15,14 @@ import { EditRoster } from "../Admin/EditRoster";
 import StaffSchedule from "../Admin/StaffSchedule";
 
 
-
-
-import Preplist from "../MyKitchen/Preplist";
-
 import StaffScheduleDay from "../Admin/StaffScheduleDay";
 import Attendance from "../Admin/Attendance";
 
 import AddToCart from "../pages/AddToCart";
+import Login from "../authentication/login";
+import OrdersHome from "../Orders/OrdersHome";
 
-
-
-
+import Preplist from "../MyKitchen/Preplist";
 import { ProductList } from "../Suppliers/ProductList";
 import { ManageSupplier } from "../Suppliers/ManageSupplier";
 import { SupplierDetails } from "../Suppliers/SupplierDetails";
@@ -34,17 +30,19 @@ import { OrderHistory } from "../Orders/OrderHistory";
 import { RepeatOrder } from "../Orders/RepeatOrder";
 
 const routes =createBrowserRouter([
-
+ {
+    path: "*",
+    element: <Navigate to="/"  />,
+  },
     {
       path: "/",
       element: <MainLayout />,
     },
-
     {
       path: "/section",
       element: <Sections />,
     },
-     {
+    {
       path: "/Pantry-List",
       element: <PantryList />,
     },
@@ -52,8 +50,7 @@ const routes =createBrowserRouter([
       path: "/dashboard",
       element: <Dashboard />,
     },
-
-     {
+    {
       path: "/manage-team",
       element: <ManageTeam />,
     },
@@ -69,13 +66,12 @@ const routes =createBrowserRouter([
       path: "/roster",
       element: <RosterManagement/>,
     },
-     {
+    {
       path: "/edit-roster",
       element: <EditRoster />
     },
     
    
-
       {
       path: "/add-to-pantry",
       element: <AddToPantry />,
@@ -104,11 +100,6 @@ const routes =createBrowserRouter([
    
     
 
-
-      {
-    path: "*",
-    element: <Navigate to="/"  />,
-  },
   {
     path: "/day-staff",
     element: <StaffScheduleDay />,
@@ -118,10 +109,7 @@ const routes =createBrowserRouter([
     element: <Attendance />,
   },
 
- {
-    path: "*",
-    element: <Navigate to="/"  />,
-  },  
+
   
   {
 
@@ -129,8 +117,8 @@ const routes =createBrowserRouter([
       element: <Preplist/>,
     },
 
-
 {
+
       path: "/product-list",
       element: <ProductList />,
     },
@@ -156,7 +144,16 @@ const routes =createBrowserRouter([
       element: <AddToCart/>,
     },
 
-
+    //fardin
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/orders/home",
+      element: <OrdersHome />,
+    },
+    //fardin
 
 
 

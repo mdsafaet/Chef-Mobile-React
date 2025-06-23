@@ -1,18 +1,16 @@
 import React from 'react'
 import { Nav } from '../common/Nav'
 import { Footer } from '../common/Footer'
-import { Dashboard } from '../pages/Dashboard'
-import ClockIn from '../pages/ClockIn'
+import { Dashboard } from './Dashboard'
+import ClockIn from './ClockIn'
 
 export const MainLayout = () => {
   return (
-    <div>
+    <div className='p-3'>
         <Nav />
-<ClockIn />
+          <ClockIn />
           <Dashboard />
-         <Footer />   
-
-         
+         <Footer />  
     </div>
   )
 }
