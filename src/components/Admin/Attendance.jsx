@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Download, Plus, Edit } from 'lucide-react'; 
 import { Nav } from '../common/Nav';
 import { Footer } from '../common/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const Attendance = () => {
  
@@ -86,12 +87,34 @@ const Attendance = () => {
 
   const currentMonth = "June"; 
   const currentWeekTotal = staff.reduce((acc, member) => acc + member.weekTotal, 0);
+  const navigate = useNavigate(); 
+      
+        const rosterClick = () => {
+    navigate('/roster'); 
+  };
+        
+        const viewRosterClick = () => {
+          navigate('/staff-schedule'); 
+        };
+
+        const attendanceClick=() =>{
+          navigate('/attendance')
+        };
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800">
         <Nav />
         <main className="max-w-full mx-auto p-4">
-      
+      <div className="bg-white shadow-sm sticky top-0 z-10">
+        <div className="flex bg-gray-200 rounded-lg overflow-hidden shadow-sm mb-6">
+        <button onClick={ rosterClick}
+         className="flex-1 py-3 text-center text-gray-600 text-sm">Roster Settings</button>
+        <button onClick={viewRosterClick} 
+        className="flex-1 py-3 text-center text-gray-600 text-sm">View Roster</button>
+        <button onClick={attendanceClick}
+        className="flex-1 py-3 text-center text-white font-semibold bg-orange-500 border-b-2 border-white rounded-lg text-sm">Staff Attendance</button>
+      </div>
+      </div>
       <div className="sticky top-0 z-10 bg-white px-4 py-4 shadow-sm">
         <div className="mb-3 flex items-center justify-between">
           <div className="flex items-center gap-4">

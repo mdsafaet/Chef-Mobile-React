@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Plus, Search, Clock, Users, Edit3, Trash2 } from 'lucide-react';
 import { Nav } from '../common/Nav';
 import { Footer } from '../common/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const StaffScheduleDay= () => {
   const [selectedDay, setSelectedDay] = useState(18);
@@ -64,12 +65,45 @@ const StaffScheduleDay= () => {
       return currentHour >= startHour && currentHour < endHour;
     });
   };
+  
+  const navigate = useNavigate(); 
+        
+          const rosterClick = () => {
+      navigate('/roster'); 
+    };
+          
+          const viewRosterClick = () => {
+            navigate('/staff-schedule'); 
+          };
+  
+          const attendanceClick=() =>{
+            navigate('/attendance')
+          };
+  
+          const dayClick=() =>{
+            navigate('/day-staff')
+          };
+          const weekClick=() =>{
+            navigate('/staff-schedule')
+          };
+
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Nav />
       <main className="max-w-full mx-auto p-4">
+        
       <div className="bg-white shadow-sm sticky top-0 z-10">
+        <div className="flex bg-gray-200 rounded-lg overflow-hidden shadow-sm mb-6">
+        <button onClick={ rosterClick}
+         className="flex-1 py-3 text-center text-gray-600 text-sm">Roster Settings</button>
+        <button onClick={viewRosterClick} 
+        className=" flex-1 py-3 text-center text-white font-semibold bg-orange-500 border-b-2 border-white rounded-lg text-sm">View Roster</button>
+        <button onClick={attendanceClick}
+        className="flex-1 py-3 text-center text-gray-600 text-sm">Staff Attendance</button>
+      </div>
+
+        
         <div className="px-4 py-4">
           {/* Search and Navigation */}
           <div className="flex items-center justify-between mb-4">
@@ -102,7 +136,7 @@ const StaffScheduleDay= () => {
           {/* View Toggle */}
           <div className="flex bg-gray-100 rounded-lg p-1 mb-4">
             <button
-              onClick={() => setViewMode('week')}
+              onClick={weekClick}
               className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all flex items-center justify-center space-x-2 ${
                 viewMode === 'week'
                   ? 'bg-white text-gray-900 shadow-sm'

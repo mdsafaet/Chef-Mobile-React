@@ -8,8 +8,7 @@ export const AddStaff = () => {
     <div className="bg-gray-100 min-h-screen font-sans">
       <Nav />
 
-      {/* Main content wrapper with increased bottom padding */}
-      {/* The key change is adding 'pb-8' (or 'pb-12' for more space) here */}
+      
       <div className="bg-white shadow-md rounded-lg p-4 md:p-8 max-w-6xl mx-auto my-8 pb-18">
         <div className="flex items-center justify-center pb-4 border-b border-gray-200 mb-6">
 
@@ -19,7 +18,7 @@ export const AddStaff = () => {
          
             
             
-            <h1 className="text-xl  md:text-2xl font-semibold text-gray-800" >Add Staff</h1>
+            
           
 
           <div className="flex items-center space-x-4">
@@ -28,7 +27,7 @@ export const AddStaff = () => {
           </div>
         </div>
 
-        {/* Profile Avatar and Upload Buttons Section */}
+        
         <div className="flex-shrink-0 flex flex-col items-center justify-center md:justify-start gap-4 p-4 md:p-0">
           <div className="profile-avatar">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
@@ -39,10 +38,10 @@ export const AddStaff = () => {
           <button className="bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600 transition-colors text-sm">Select Access Control Level*</button>
         </div>
 
-        {/* Form Fields Section */}
+        
         <div className="flex flex-col md:flex-row gap-8">
           <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
-            {/* Full Name */}
+            
             <div className="shadow-gray-200 shadow-xl">
               <label htmlFor="Full Name" className="block text-gray-700">
                 Full Name

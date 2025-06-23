@@ -4,11 +4,30 @@ import { Footer } from '../common/Footer';
 
 
 import editIcon from '../common/edit.png';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+
+
 
 export const ManageTeam = () => {
   const [mobileOpen, setMobileOpen] = useState(false); 
+  const navigate = useNavigate(); 
+
+  
+  const handleClick = () => {
+    navigate('/add-staff'); 
+  };
+  const rosterClick = () => {
+    navigate('/roster'); 
+  };
+  const editClick = () => {
+    navigate('/edit-staff'); 
+  };
+
+
 
   return (
+
+    
     <div className="bg-white-100 min-h-screen font-sans"> 
       <Nav />
       
@@ -22,16 +41,21 @@ export const ManageTeam = () => {
       <main className="max-w-full mx-auto p-4">
         <div className="flex bg-gray-200 rounded-lg overflow-hidden shadow-sm mb-6">
           <button className="flex-1 py-3 text-center text-white font-semibold bg-orange-500 border-b-2 border-gray-600 rounded-lg text-sm">Manage Team</button>
-          <button className="flex-1 py-3 text-center text-gray-600 text-sm">Manage Roster</button>
+          <button
+           onClick={rosterClick}
+          className="flex-1 py-3 text-center text-gray-600 text-sm">Manage Roster</button>
         </div>
 
         <div className="mb-6">
-          <button className="flex items-center gap-2 px-6 py-2 bg-orange-500 text-white rounded-md shadow-md text-sm">
+          <button
+            onClick={handleClick}
+          className="flex items-center gap-2 px-6 py-2 bg-orange-500 text-white rounded-md shadow-md text-sm">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
             </svg>
             New Staff
-          </button>
+          </button>  
+          
         </div>
         <div className="flex items-center justify-end mt-4">
           <nav className="relative z-0 inline-flex shadow-sm -space-x-px" aria-label="Pagination">
@@ -70,9 +94,9 @@ export const ManageTeam = () => {
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">0404670200</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Jamal (0412389528)</td>
                 <td className="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
-                  <a href="#" className="hover:text-blue-900 inline-block">
+                  <button onClick={editClick} className="hover:text-blue-900 inline-block">
                     <img src={editIcon} className="h-5 w-5" alt="Edit" /> {/* Use imported image */}
-                  </a>
+                  </button>
                 </td>
               </tr>
               <tr className="shadow-gray-200 shadow-xl">
@@ -103,9 +127,9 @@ export const ManageTeam = () => {
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">0414321654</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">Hunter (0456321456)</td>
                 <td className="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
-                  <a href="#" className="text-blue-600 hover:text-blue-900 inline-block">
+                  <button onClick={editClick} className="text-blue-600 hover:text-blue-900 inline-block">
                     <img src={editIcon} className="h-5 w-5" alt="Edit" />
-                  </a>
+                  </button>
                 </td>
               </tr>
               <tr className="shadow-gray-200 shadow-xl">
