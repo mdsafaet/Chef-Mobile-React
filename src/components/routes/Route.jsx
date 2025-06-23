@@ -10,6 +10,11 @@ import { EditStaff } from "../Admin/EditStaff"
 import AddToPantry from "../MyKitchen/AddToPantry";
 import AbcFood from "../MyKitchen/AbcFood";
 
+
+import { EditRoster } from "../Admin/EditRoster";
+import StaffSchedule from "../Admin/StaffSchedule";
+
+
 import { EditRoster } from "../Admin/EditRoster";
 import StaffSchedule from "../Admin/StaffSchedule";
 
@@ -21,6 +26,13 @@ import Attendance from "../Admin/Attendance";
 import AddToCart from "../pages/AddToCart";
 import Login from "../authentication/login";
 import OrdersHome from "../Orders/OrdersHome";
+
+import Preplist from "../MyKitchen/Preplist";
+import { ProductList } from "../Suppliers/ProductList";
+import { ManageSupplier } from "../Suppliers/ManageSupplier";
+import { SupplierDetails } from "../Suppliers/SupplierDetails";
+import { OrderHistory } from "../Orders/OrderHistory";
+import { RepeatOrder } from "../Orders/RepeatOrder";
 
 const routes =createBrowserRouter([
  {
@@ -105,10 +117,32 @@ const routes =createBrowserRouter([
 
   
   {
+
       path: "/prep-list",
       element: <Preplist/>,
     },
 
+
+
+      path: "/product-list",
+      element: <ProductList />,
+    },
+   {
+  path: "/suupliers/home",
+  element: <ManageSupplier />,
+},
+   {
+  path: "/suppliers/details",
+  element: <SupplierDetails />,
+},
+   {
+  path: "/orders/history",
+  element: <OrderHistory />,
+},
+  {
+  path:"/orders/repeat",
+  element:<RepeatOrder />,
+}
 
       {
       path: "/add-to-cart",
@@ -125,6 +159,7 @@ const routes =createBrowserRouter([
       element: <OrdersHome />,
     },
     //fardin
+
 
 
 
