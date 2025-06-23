@@ -4,7 +4,7 @@ import { Nav } from '../common/Nav';
 
 export const AddStaff = () => {
   return (
-    
+    <div>
     <div className="bg-gray-100 min-h-screen font-sans">
       <Nav />
 
@@ -78,6 +78,10 @@ export const AddStaff = () => {
                 </div>
               </div>
             </div>
+
+
+
+
 
             {/* Login Password */}
             <div className="col-span-1 shadow-gray-200 shadow-xl">

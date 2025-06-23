@@ -17,7 +17,7 @@ export const Dashboard = () => {
       
 
     
-      <a href="#" className="p-5  rounded-md text-orange-500 flex flex-col items-center justify-center shadow-xl shadow-gray-400">
+      
 
 
       <Link to={'/product-list'} className="p-5  rounded-md text-orange-500 flex flex-col items-center justify-center shadow-xl shadow-gray-400">
