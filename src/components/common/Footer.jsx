@@ -32,7 +32,7 @@ export const Footer = () => {
         </div>
 
         {/* Active Center Icon - HOME */}
-        <div className="flex flex-col items-center -mt-4 space-y-1">
+        <div className="flex flex-col items-center text-gray-400-mt-4 space-y-1">
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -48,10 +48,10 @@ export const Footer = () => {
         {/* Icon 4 - Order */}
         <div className="flex flex-col items-center text-gray-400">
           <NavLink
-            to="/order"
+            to="/"
             className={({ isActive }) =>
-              `w-12 h-12 flex items-center justify-center rounded-full shadow-md 
-              ${isActive ? 'bg-orange-500 text-white' : 'text-gray-400'}`
+              ` 
+              ${isActive ? 'w-14 h-14 flex items-center justify-center bg-orange-500 text-white rounded-full shadow-xl border-4 border-white' : 'text-xl'}`
             }
           >
             <i className="fi fi-rr-receipt text-xl"></i>
@@ -60,18 +60,19 @@ export const Footer = () => {
         </div>
 
         {/* Icon 5 - Cart */}
-        <div className="flex flex-col items-center space-y-1">
+        <div className="flex flex-col items-center text-gray-400">
           <NavLink
             to="/add-to-cart"
             className={({ isActive }) =>
-              `w-12 h-12 flex items-center justify-center rounded-full shadow-md 
-              ${isActive ? 'bg-orange-500 text-white' : 'text-gray-400'}`
+              `
+              ${isActive ? 'w-14 h-14 flex items-center justify-center bg-orange-500 text-white rounded-full shadow-xl border-4 border-white' : 'text-xl'}`
             }
           >
             <i className="fi fi-rr-shopping-cart-add text-xl"></i>
           </NavLink>
           <p className="text-xs">Cart</p>
         </div>
+        
       </div>
     </div>
   )

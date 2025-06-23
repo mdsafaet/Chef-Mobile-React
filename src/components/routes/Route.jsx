@@ -11,8 +11,6 @@ import AddToPantry from "../MyKitchen/AddToPantry";
 import AbcFood from "../MyKitchen/AbcFood";
 
 
-import { EditRoster } from "../Admin/EditRoster";
-import StaffSchedule from "../Admin/StaffSchedule";
 
 
 import { EditRoster } from "../Admin/EditRoster";
@@ -27,7 +25,6 @@ import AddToCart from "../pages/AddToCart";
 
 
 
-import Preplist from "../MyKitchen/Preplist";
 import { ProductList } from "../Suppliers/ProductList";
 import { ManageSupplier } from "../Suppliers/ManageSupplier";
 import { SupplierDetails } from "../Suppliers/SupplierDetails";
@@ -131,7 +128,7 @@ const routes =createBrowserRouter([
     },
 
 
-
+{
       path: "/product-list",
       element: <ProductList />,
     },
@@ -150,12 +147,12 @@ const routes =createBrowserRouter([
   {
   path:"/orders/repeat",
   element:<RepeatOrder />,
-}
+},
 
-      {
-      path: "/add-to-cart",
-      element: <AddToCart/>,
-    },
+{
+  path: "/add-to-cart",
+  element: <AddToCart/>,
+},
 
 
 
