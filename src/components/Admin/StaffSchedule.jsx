@@ -95,6 +95,7 @@ const StaffSchedule = () => {
     <div className="min-h-screen bg-gray-50">
       <Nav />
       <main className="max-w-full mx-auto p-4">
+        
       <div className="bg-white shadow-sm sticky top-0 z-10">
         <div className="flex bg-gray-200 rounded-lg overflow-hidden shadow-sm mb-6">
         <button className="flex-1 py-3 text-center text-white font-semibold bg-orange-500 border-b-2 border-white rounded-lg text-sm">Roster Settings</button>
@@ -102,8 +103,18 @@ const StaffSchedule = () => {
         <button className="flex-1 py-3 text-center text-gray-600 text-sm">Staff Attendance</button>
       </div>
         <div className="px-4 py-4">
+          <div class="flex justify start">
+  <button className="flex items-center px-4 py-2 gap-4 bg-orange-500 text-white rounded-md shadow-md text-xs">
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
+    </svg>
+    Enroll Staff
+  </button>
+</div>
+
           
           <div className="flex items-center justify-between mb-4">
+            
             
             <div className="relative flex-1 mr-4">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -156,6 +167,8 @@ const StaffSchedule = () => {
           </div>
         </div>
       </div>
+
+      
 
       {/* Week View Content */}
       <div className="px-4 py-4 pb-20">
