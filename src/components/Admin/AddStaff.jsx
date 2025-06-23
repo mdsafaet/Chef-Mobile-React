@@ -4,15 +4,14 @@ import { Nav } from '../common/Nav';
 
 export const AddStaff = () => {
   return (
-    <div>
     <div className="bg-gray-100 min-h-screen font-sans">
       <Nav />
 
-      
+
       <div className="bg-white shadow-md rounded-lg p-4 md:p-8 max-w-6xl mx-auto my-8 pb-18">
         <div className="flex items-center justify-center pb-4 border-b border-gray-200 mb-6">
-
           <h1 className="text-xl md:text-2xl font-semibold text-gray-800">Add Staff</h1>
+
           
 
          
@@ -25,6 +24,7 @@ export const AddStaff = () => {
             <div className="hidden md:flex items-center space-x-4">
             </div>
           </div>
+
         </div>
 
         
@@ -43,17 +43,10 @@ export const AddStaff = () => {
           <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
             
             <div className="shadow-gray-200 shadow-xl">
-              <label htmlFor="Full Name" className="block text-gray-700">
-                Full Name
-              </label>
-              <input
-                type="text"
-                name="Full Name"
-                id="Full Name"
-                required
-                className="w-full px-4 py-2 border-2 border-white rounded-lg shadow-[inset_4px_4px_10px_rgba(0,0,0,0.2)] focus:outline-none focus:ring-2 focus:ring-orange-500"
-              />
+              <label htmlFor="Full Name" className="block text-gray-700">Full Name</label>
+              <input type="text" name="Full Name" id="Full Name" required className="w-full px-4 py-2 border-2 border-white rounded-lg shadow-[inset_4px_4px_10px_rgba(0,0,0,0.2)] focus:outline-none focus:ring-2 focus:ring-orange-500" />
             </div>
+
             {/* Email */}
             <div className="col-span-1 shadow-gray-200 shadow-xl">
               <label htmlFor="email" className="block text-gray-700">Email</label>
@@ -62,12 +55,13 @@ export const AddStaff = () => {
 
             {/* Tax File Number */}
             <div className="col-span-1 shadow-gray-200 shadow-xl">
-              <label htmlFor="taxFileNumber" className="block text-gray-700 ">Tax File Number</label>
+              <label htmlFor="taxFileNumber" className="block text-gray-700">Tax File Number</label>
               <input type="text" id="taxFileNumber" name="taxFileNumber" className="w-full px-4 py-2 border-2 border-white rounded-lg shadow-[inset_4px_4px_10px_rgba(0,0,0,0.2)] focus:outline-none focus:ring-2 focus:ring-orange-500" />
             </div>
+
             {/* Date of Birth */}
             <div className="col-span-1 shadow-gray-200 shadow-xl">
-              <label htmlFor="dob" className="">Date of Birth</label>
+              <label htmlFor="dob" className="block text-gray-700">Date of Birth</label>
               <div className="relative">
                 <input type="text" id="dob" name="dob" defaultValue="06/2025" className="w-full px-4 py-2 border-2 border-white rounded-lg shadow-[inset_4px_4px_10px_rgba(0,0,0,0.2)] focus:outline-none focus:ring-2 focus:ring-orange-500" />
                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
@@ -78,15 +72,12 @@ export const AddStaff = () => {
               </div>
             </div>
 
-
-
-
-
             {/* Login Password */}
             <div className="col-span-1 shadow-gray-200 shadow-xl">
               <label htmlFor="loginPassword" className="block text-sm font-medium text-gray-700 mb-1">Login Password</label>
               <input type="password" id="loginPassword" name="loginPassword" className="w-full px-4 py-2 border-2 border-white rounded-lg shadow-[inset_4px_4px_10px_rgba(0,0,0,0.2)] focus:outline-none focus:ring-2 focus:ring-orange-500" />
             </div>
+
             {/* Position / Rank */}
             <div className="col-span-1 shadow-gray-200 shadow-xl">
               <label htmlFor="positionRank" className="block text-sm font-medium text-gray-700 mb-1">Position / Rank</label>
@@ -102,6 +93,7 @@ export const AddStaff = () => {
                 <option value="contract">Contract</option>
               </select>
             </div>
+
             {/* Weekly Salary */}
             <div className="col-span-1 shadow-gray-200 shadow-xl">
               <label htmlFor="weeklySalary" className="block text-sm font-medium text-gray-700 mb-1">Weekly Salary</label>
@@ -113,6 +105,7 @@ export const AddStaff = () => {
               <label htmlFor="mobileNo" className="block text-sm font-medium text-gray-700 mb-1">Mobile No.</label>
               <input type="text" id="mobileNo" name="mobileNo" className="w-full px-4 py-2 border-2 border-white rounded-lg shadow-[inset_4px_4px_10px_rgba(0,0,0,0.2)] focus:outline-none focus:ring-2 focus:ring-orange-500" />
             </div>
+
             {/* Emergency Contact */}
             <div className="col-span-1 shadow-gray-200 shadow-xl">
               <label htmlFor="emergencyContact" className="block text-sm font-medium text-gray-700 mb-1">Emergency Contact</label>
@@ -132,24 +125,12 @@ export const AddStaff = () => {
 
         {/* Save Button Section */}
         <div className="mt-8 text-center">
-          <button className="bg-orange-500 text-white font-semibold px-12 rounded-md hover:bg-orange-600 transition-colors text-2xl shadow-lg">Save</button>
+          <button className="bg-orange-500 text-white font-semibold px-12 py-2 rounded-md hover:bg-orange-600 transition-colors text-2xl shadow-lg">Save</button>
         </div>
       </div>
 
-
-      {/* The Footer component remains unchanged */}
+      {/* Footer */}
       <Footer />
     </div>
-
-        <Footer />
-
-
-
-
-    </div>
-
-    
-  
-
   );
 };

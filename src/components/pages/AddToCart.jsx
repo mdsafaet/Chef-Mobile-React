@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import { Nav } from '../common/Nav'
 import { Footer } from '../common/Footer'
+import { MdDelete, MdEdit, MdOutlineDeleteOutline } from 'react-icons/md'
 
 const AddToCart = () => {
     //  const [deliveryDate, setDeliveryDate] = useState("2025-06-23");
@@ -63,32 +64,42 @@ const AddToCart = () => {
       {/* Product Card */}
       <div className="border rounded-lg shadow p-4 mb-4 relative">
    
-        <div className="flex items-center justify-between">
-          <div className='  '>
-             <div
-                    className="w-16 h-16 bg-white border-2 border-gray-300 rounded-lg shadow-lg flex items-center justify-center"
-                    style={{
-                      boxShadow: 'inset 0px 0px 3px #d1d1d1, 1px 1px 8px #54545466',
-                    }}
-                  >
-                    <img
-                      src="https://res.cloudinary.com/dnawewlz7/image/upload/v1/Restaurant%20Tech%20Files/ordersplus/uqxjazvsq0rgwrwnsvd3"
-                      alt="Beef Tenderloin"
-                      className="w-12 h-12 object-cover rounded-lg"
-                    />
-                  </div>
-            <p className="font-semibold">Lamb Rack</p>
-            <p className="text-xs">1 kg</p>
-            <p className="text-xs text-gray-500">ABC Meat & Poultry</p>
-            <p className="text-xs text-gray-400">SKU: LMR-89012</p>
-            <p className="text-xs text-green-500">In Stock</p>
-            <p className="text-red-600 font-semibold mt-1">$ 36.00</p>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <button className="text-gray-500 text-lg">🗑</button>
-            <button className="text-gray-500 text-lg">✏️</button>
-          </div>
-        </div>
+<div className="flex items-center justify-between space-x-4">
+  {/* Left Side - Product Info */}
+  <div className="flex items-center space-x-4">
+    {/* Product Image */}
+    <div
+      className="w-16 h-16 bg-white border-2 border-gray-300 rounded-lg shadow-lg flex items-center justify-center"
+      style={{
+        boxShadow: 'inset 0px 0px 3px #d1d1d1, 1px 1px 8px #54545466',
+      }}
+    >
+      <img
+        src="https://res.cloudinary.com/dnawewlz7/image/upload/v1/Restaurant%20Tech%20Files/ordersplus/uqxjazvsq0rgwrwnsvd3"
+        alt="Beef Tenderloin"
+        className="w-12 h-12 object-cover rounded-lg"
+      />
+    </div>
+
+    {/* Product Details */}
+    <div className='ml-2'>
+      <p className="font-semibold">Lamb Rack</p>
+      <p className="text-xs">1 kg</p>
+      <p className="text-xs text-gray-500">ABC Meat & Poultry</p>
+      <p className="text-xs text-gray-400">SKU: LMR-89012</p>
+      <p className="text-xs text-green-500">In Stock</p>
+      <p className="text-red-600 font-semibold mt-1">$ 36.00</p>
+    </div>
+  </div>
+
+  {/* Right Side - Action Buttons */}
+  <div className="flex flex-col items-center gap-2">
+   <MdDelete className="text-red-700 text-lg" />
+    <MdEdit className="text-blue-400 text-lg"  />
+
+  </div>
+</div>
+
       </div>
 
       {/* Order Summary */}
