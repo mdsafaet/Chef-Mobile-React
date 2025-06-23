@@ -12,8 +12,16 @@ export const AddStaff = () => {
       {/* The key change is adding 'pb-8' (or 'pb-12' for more space) here */}
       <div className="bg-white shadow-md rounded-lg p-4 md:p-8 max-w-6xl mx-auto my-8 pb-18">
         <div className="flex items-center justify-center pb-4 border-b border-gray-200 mb-6">
+
           <h1 className="text-xl md:text-2xl font-semibold text-gray-800">Add Staff</h1>
-          {/* Empty div, potentially for future elements */}
+          
+
+         
+            
+            
+            <h1 className="text-xl  md:text-2xl font-semibold text-gray-800" >Add Staff</h1>
+          
+
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex items-center space-x-4">
             </div>
@@ -125,8 +133,20 @@ export const AddStaff = () => {
         </div>
       </div>
 
+
       {/* The Footer component remains unchanged */}
       <Footer />
     </div>
+
+        <Footer />
+
+
+
+
+    </div>
+
+    
+  
+
   );
 };
