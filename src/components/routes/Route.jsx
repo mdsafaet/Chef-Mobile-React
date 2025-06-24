@@ -28,8 +28,8 @@ import AddToCart from "../pages/AddToCart";
 
 
 
+import { SuppliersHome } from "../Suppliers/SuppliersHome";
 import { ProductList } from "../Suppliers/ProductList";
-import { ManageSupplier } from "../Suppliers/ManageSupplier";
 import { SupplierDetails } from "../Suppliers/SupplierDetails";
 import { OrderHistory } from "../Orders/OrderHistory";
 import { RepeatOrder } from "../Orders/RepeatOrder";
@@ -133,12 +133,12 @@ const routes =createBrowserRouter([
 
 {
 
-      path: "/product-list",
-      element: <ProductList />,
+      path: "/suppliers/home",
+      element: <SuppliersHome />,
     },
    {
-  path: "/suupliers/home",
-  element: <ManageSupplier />,
+  path: "/suppliers/product_list",
+  element: <ProductList />,
 },
    {
   path: "/suppliers/details",
