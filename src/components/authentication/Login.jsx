@@ -1,6 +1,6 @@
 const Login = () => {
   return (
-    <div classNameName="bg-white min-h-screen flex items-center justify-center">
+    <div className="bg-white min-h-screen flex items-center justify-center">
       <div className="bg-white shadow-2xl rounded-2xl overflow-hidden flex flex-col md:flex-row w-full max-w-4xl mx-4">
         {/* Left Section with Image */}
         <div className="md:w-1/2 bg-white p-6 flex items-center justify-center">

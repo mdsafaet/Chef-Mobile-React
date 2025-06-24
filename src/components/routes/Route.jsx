@@ -7,6 +7,8 @@ import { ManageTeam } from "../Admin/ManageTeam";
 import { AddStaff } from "../Admin/AddStaff";
 import { RosterManagement } from "../Admin/RosterManagement";
 import { EditStaff } from "../Admin/EditStaff"
+import { EditRoster } from "../Admin/EditRoster";
+
 import AddToPantry from "../MyKitchen/AddToPantry";
 import AbcFood from "../MyKitchen/AbcFood";
 
@@ -25,6 +27,8 @@ import { ManageSupplier } from "../Suppliers/ManageSupplier";
 import { SupplierDetails } from "../Suppliers/SupplierDetails";
 import { OrderHistory } from "../Orders/OrderHistory";
 import { RepeatOrder } from "../Orders/RepeatOrder";
+import StaffSchedule from "../Admin/StaffSchedule";
+import Preplist from "../MyKitchen/PrepList";
 
 const routes =createBrowserRouter([
  {
@@ -65,7 +69,7 @@ const routes =createBrowserRouter([
     },
     {
       path: "/edit-roster",
-      element: <EditRoster />
+      element: <EditRoster />,
     },
     
    
@@ -82,7 +86,7 @@ const routes =createBrowserRouter([
 
       {
       path: "/staff-schedule",
-      element: <StaffSchedule />
+      element: <StaffSchedule/>, 
     },
     
     
